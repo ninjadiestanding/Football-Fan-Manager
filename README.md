@@ -21,8 +21,6 @@ To run this project, you will need:
 # Usage
 
 1. After the project has been successfully built, in the Visual Studio menu, select **Debug > Start Debugging** to run the program
-
-1. After the project has been successfully built, in the Visual Studio menu, select **Debug > Start Debugging** to run the program
 2. If everything goes well, you will see the program window and menu
 3. Open windows and manipulate football clubs, players and fans however you want
 
