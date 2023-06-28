@@ -5,31 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Football_Fan_Manager.Windows.Fans"
         mc:Ignorable="d"
-        Title="Fans" Height="360" Width="330"
+        Title="Fans" Height="380" Width="365"
         Background="LightBlue"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Canvas>
 
-            <Label FontSize="20" Canvas.Left="5">Football fans</Label>
+            <Label FontSize="20" Canvas.Left="10" Canvas.Top="10">Fans</Label>
 
-            <Button Content="Add" Canvas.Left="10" Canvas.Top="35" Click="AddFan_Button_Click" />
-            <Button Content="Edit" Canvas.Left="37" Canvas.Top="35" Click="EditFan_Button_Click" />
-            <Button Content="Delete" Canvas.Left="62" Canvas.Top="35" Click="DeleteFan_Button_Click" />
+            <Button Content="Add" Width="50" Canvas.Left="10" Canvas.Top="58" Click="AddFan_Button_Click" />
+            <Button Content="Edit" Width="50" Canvas.Left="60" Canvas.Top="58" Click="EditFan_Button_Click" />
+            <Button Content="Delete" Width="50" Canvas.Left="110" Canvas.Top="58" Click="DeleteFan_Button_Click" />
 
-            <Button Content="Favorite clubs" Canvas.Left="213" Canvas.Top="35" Click="FavoriteClubs_Button_Click" />
+            <Button Content="Favorite clubs" Canvas.Left="242" Canvas.Top="58" Click="FavoriteClubs_Button_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
-            <DataGrid x:Name="FansDataGrid" ItemsSource="{Binding Fan}" Width="280" Height="200" Canvas.Top="60" Canvas.Left="10" 
-                          AutoGenerateColumns="False" IsReadOnly="True" SelectionUnit="FullRow" CanUserResizeColumns="False">
+            <DataGrid x:Name="FansDataGrid" ItemsSource="{Binding Fan}" Width="308" Height="200" Canvas.Top="83" Canvas.Left="10" 
+                          AutoGenerateColumns="False" IsReadOnly="True" SelectionUnit="FullRow" CanUserResizeColumns="False" >
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="30" />
-                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="80" />
-                    <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="80" />
-                    <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}" Width="80" />
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="30" Visibility="Collapsed" />
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="100" />
+                    <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="100" />
+                    <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}" Width="100" />
                 </DataGrid.Columns>
             </DataGrid>
 
-            <Button Content="Close" Canvas.Left="257" Canvas.Top="288" Click="Close_Button_Click" />
+            <Button Content="Close" Width="50" Canvas.Left="268" Canvas.Top="305" Click="Close_Button_Click" />
 
         </Canvas>
     </Grid>

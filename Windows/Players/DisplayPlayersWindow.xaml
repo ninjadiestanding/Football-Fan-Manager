@@ -5,35 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Football_Fan_Manager.Windows.Players"
         mc:Ignorable="d"
-        Title="Players" Height="350" Width="600"
+        Title="Players" Height="390" Width="690"
         Background="LightBlue"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Canvas>
 
-            <Label FontSize="20" Canvas.Left="5">Football players</Label>
+            <Label FontSize="20" Canvas.Left="10" Canvas.Top="10">Players</Label>
 
-            <Button Content="Add" Canvas.Left="10" Canvas.Top="35" Click="AddPlayer_Button_Click" />
-            <Button Content="Edit" Canvas.Left="37" Canvas.Top="35" Click="EditPlayer_Button_Click" />
-            <Button Content="Delete" Canvas.Left="62" Canvas.Top="35" Click="DeletePlayer_Button_Click" />
+            <Button Content="Add" Width="50" Canvas.Left="10" Canvas.Top="62" Click="AddPlayer_Button_Click" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Button Content="Edit" Width="50" Canvas.Left="60" Canvas.Top="62" Click="EditPlayer_Button_Click" />
+            <Button Content="Delete" Width="50" Canvas.Left="110" Canvas.Top="62" Click="DeletePlayer_Button_Click" />
 
-            <Button Content="Transfer" Canvas.Left="429" Canvas.Top="35" Click="TransferPlayer_Button_Click" />
-            <Button Content="Leave the club" Canvas.Left="480" Canvas.Top="35" Click="LeavePlayer_Button_Click" />
+            <Button Content="Transfer" Width="60" Canvas.Left="488" Canvas.Top="62" Click="TransferPlayer_Button_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Button Content="Leave the club" Width="90" Canvas.Left="548" Canvas.Top="62" Click="LeavePlayer_Button_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
-            <DataGrid x:Name="PlayersDataGrid" ItemsSource="{Binding Player}" Width="550" Height="200" Canvas.Top="60" Canvas.Left="10" 
-                          AutoGenerateColumns="False" IsReadOnly="True" SelectionUnit="FullRow" CanUserResizeColumns="False">
+            <DataGrid x:Name="PlayersDataGrid" ItemsSource="{Binding Player}" Width="628" Height="200" Canvas.Top="87" Canvas.Left="10" 
+                          AutoGenerateColumns="False" IsReadOnly="True" SelectionUnit="FullRow" CanUserResizeColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="30" />
-                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="80" />
-                    <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="80" />
-                    <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}" Width="80" />
-                    <DataGridTextColumn Header="Date of birth" Binding="{Binding DateOfBirth}" Width="80" />
-                    <DataGridTextColumn Header="Snils" Binding="{Binding Snils}" Width="80" />
-                    <DataGridTextColumn Header="Club" Binding="{Binding ClubName}" Width="110" />
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="30" Visibility="Collapsed" />
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="100" />
+                    <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="100" />
+                    <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}" Width="100" />
+                    <DataGridTextColumn Header="Date of birth" Binding="{Binding DateOfBirth, StringFormat={}{0:MM/dd/yyyy}}" Width="100" />
+                    <DataGridTextColumn Header="Snils" Binding="{Binding Snils}" Width="100" />
+                    <DataGridTextColumn Header="Club" Binding="{Binding ClubName}" Width="120" />
                 </DataGrid.Columns>
             </DataGrid>
 
-            <Button Content="Close" Canvas.Left="527" Canvas.Top="287" Click="Close_Button_Click" />
+            <Button Content="Close" Width="50" Canvas.Left="588" Canvas.Top="310" Click="Close_Button_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
         </Canvas>
     </Grid>

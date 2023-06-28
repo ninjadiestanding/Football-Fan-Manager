@@ -17,5 +17,6 @@ namespace Football_Fan_Manager.Services.Interfaces
         void AddFavoriteClub(int fanId, int clubId);
         void ExcludeFavoriteClub(int fanId, int clubId);
         List<Club> GetFavoriteClubs(int fanId);
+        List<Club> GetClubsWithoutFavorite(int fanId);
     }
 }

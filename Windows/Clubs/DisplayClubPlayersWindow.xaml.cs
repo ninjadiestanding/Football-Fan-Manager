@@ -26,14 +26,15 @@ namespace Football_Fan_Manager.Windows.Clubs
         private IPlayerRepository playerRepository;
         private readonly int ClubId;
 
-        public DisplayClubPlayersWindow(int clubId)
+        public DisplayClubPlayersWindow(int clubId, string clubName)
         {
             InitializeComponent();
             clubRepository = new ClubRepository();
             playerRepository = new PlayerRepository();
-
             ClubId = clubId;
+
             ClubPlayersDataGrid.ItemsSource = clubRepository.GetPlayersForClub(ClubId);
+            headerLabel.Content = clubName + " players";
         }
 
         private void AddPlayer_Button_Click(object sender, RoutedEventArgs e)
@@ -60,7 +61,7 @@ namespace Football_Fan_Manager.Windows.Clubs
             }
         }
 
-        private void Cancel_Button_Click(object sender, RoutedEventArgs e)
+        private void Close_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

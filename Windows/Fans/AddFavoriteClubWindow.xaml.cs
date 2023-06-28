@@ -33,7 +33,7 @@ namespace Football_Fan_Manager.Windows.Fans
             fanRepository = new FanRepository();
             FanId = fanId;
 
-            ClubComboBox.ItemsSource = clubRepository.GetClubs();
+            ClubComboBox.ItemsSource = fanRepository.GetClubsWithoutFavorite(FanId);
         }
 
         private void Add_Button_Click(object sender, RoutedEventArgs e)

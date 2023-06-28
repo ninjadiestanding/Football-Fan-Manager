@@ -19,5 +19,10 @@ namespace Football_Fan_Manager.SQLQueryProviders
                                           "JOIN ClubFan cf ON c.Id = cf.ClubId " +
                                           "JOIN Fans f ON f.Id = cf.FanId " +
                                           "WHERE f.Id = @FanId";
+
+        public string GetClubsWithoutFavorite => "SELECT C.* " +
+                                                 "FROM Clubs C " +
+                                                 "LEFT JOIN ClubFan CF ON C.Id = CF.ClubId AND CF.FanId = @FanId " +
+                                                 "WHERE CF.ClubId IS NULL";
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Football_Fan_Manager.Windows.Players"
         mc:Ignorable="d"
-        Title="Add Player" Height="270" Width="280"
+        Title="Add player" Height="270" Width="280"
         Background="LightBlue"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>

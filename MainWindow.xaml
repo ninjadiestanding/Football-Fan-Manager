@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Football_Fan_Manager"
         mc:Ignorable="d"
-        Title="Football Fan Manager" Height="349" Width="460"
+        Title="Football Fan Manager" Height="349" Width="380"
         Background="LightBlue"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Canvas>
 
-            <Label FontSize="30" Canvas.Left="10" Canvas.Top="10">Football Fan Manager</Label>
+            <Label FontSize="30" Canvas.Left="41" Canvas.Top="10">Football Fan Manager</Label>
 
-            <Button Content="Clubs" FontSize="20" Width="150" Height="35" Canvas.Left="19" Canvas.Top="65" Click="Clubs_Button_Click"></Button>
-            <Button Content="Players" FontSize="20" Width="150" Height="35" Canvas.Left="19" Canvas.Top="105" Click="Players_Button_Click"></Button>
-            <Button Content="Fans" FontSize="20" Width="150" Height="35" Canvas.Left="19" Canvas.Top="145" Click="Fans_Button_Click"></Button>
-            <Button Content="Exit" FontSize="20" Width="150" Height="35" Canvas.Left="19" Canvas.Top="258" Click="Exit_Button_Click"></Button>
+            <Button Content="Clubs" FontSize="20" Width="150" Height="35" Canvas.Left="115" Canvas.Top="97" Click="Clubs_Button_Click"></Button>
+            <Button Content="Players" FontSize="20" Width="150" Height="35" Canvas.Left="115" Canvas.Top="132" Click="Players_Button_Click"></Button>
+            <Button Content="Fans" FontSize="20" Width="150" Height="35" Canvas.Left="115" Canvas.Top="167" Click="Fans_Button_Click"></Button>
+            <Button Content="Exit" FontSize="20" Width="80" Height="35" Canvas.Left="150" Canvas.Top="241" Click="Exit_Button_Click"></Button>
 
         </Canvas>
     </Grid>

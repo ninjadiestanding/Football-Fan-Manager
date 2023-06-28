@@ -80,7 +80,7 @@ namespace Football_Fan_Manager.Windows.Fans
 
             if (selectedRow != null)
             {
-                FavoriteClubsWindow favoriteClubsWindow = new FavoriteClubsWindow(selectedRow.Id);
+                FavoriteClubsWindow favoriteClubsWindow = new FavoriteClubsWindow(selectedRow.Id, selectedRow.Name, selectedRow.Surname);
                 favoriteClubsWindow.ShowDialog();
             }
         }

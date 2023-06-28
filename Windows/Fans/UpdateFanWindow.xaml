@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Football_Fan_Manager.Windows.Fans"
         mc:Ignorable="d"
-        Title="Edit Fan" Height="270" Width="280"
+        Title="Edit fan" Height="190" Width="290"
         Background="LightBlue"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
@@ -20,8 +20,8 @@
             <Label Content="Patronymic:" FontSize="15" Canvas.Top="65" Canvas.Left="5" />
             <TextBox Name="PatronymicTextBox" Canvas.Left="100" Canvas.Top="70" Width="150" Height="20" />
 
-            <Button Click="Save_Button_Click" Content="Save" FontSize="13" Canvas.Left="150" Canvas.Top="198" Width="50" />
-            <Button Click="Cancel_Button_Click" Content="Cancel" FontSize="13" Canvas.Left="200" Canvas.Top="198" Width="50" />
+            <Button Click="Save_Button_Click" Content="Save" FontSize="13" Canvas.Left="150" Canvas.Top="116" Width="50" />
+            <Button Click="Cancel_Button_Click" Content="Cancel" FontSize="13" Canvas.Left="200" Canvas.Top="116" Width="50" />
 
         </Canvas>
     </Grid>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Football_Fan_Manager.Windows.Players"
         mc:Ignorable="d"
-        Title="Edit Player" Height="270" Width="280"
+        Title="Edit Player" Height="260" Width="290"
         Background="LightBlue"
         ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
@@ -26,14 +26,8 @@
             <Label Content="Snils:" FontSize="15" Canvas.Top="125" Canvas.Left="5" />
             <TextBox Name="SnilsTextBox" Canvas.Left="100" Canvas.Top="130" Width="150" Height="20" />
 
-            <!--<Label Content="Club:" FontSize="15" Canvas.Top="155" Canvas.Left="5" />
-            <ComboBox Name="ClubComboBox" ItemsSource="{Binding Clubs}" SelectedItem="{Binding SelectedClub}" DisplayMemberPath="Name"
-                      Canvas.Left="100" Canvas.Top="160" Width="150" Height="20" />-->
-
-
-
-            <Button Click="Save_Button_Click" Content="Save" FontSize="13" Canvas.Left="150" Canvas.Top="198" Width="50" />
-            <Button Click="Cancel_Button_Click" Content="Cancel" FontSize="13" Canvas.Left="200" Canvas.Top="198" Width="50" />
+            <Button Click="Save_Button_Click" Content="Save" FontSize="13" Canvas.Left="150" Canvas.Top="182" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Button Click="Cancel_Button_Click" Content="Cancel" FontSize="13" Canvas.Left="200" Canvas.Top="182" Width="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
 
         </Canvas>
     </Grid>

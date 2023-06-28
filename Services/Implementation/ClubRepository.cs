@@ -119,7 +119,7 @@ namespace Football_Fan_Manager.Services.Implementation
                             string surname = reader.GetString(2);
                             string patronymic = reader.GetString(3);
                             DateTime date = reader.GetDateTime(4);
-                            int snils = reader.GetInt32(5);
+                            long snils = reader.GetInt64(5);
 
                             Player player = new Player(id, name, surname, patronymic, date, snils);
                             players.Add(player);

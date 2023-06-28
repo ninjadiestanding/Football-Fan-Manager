@@ -79,7 +79,7 @@ namespace Football_Fan_Manager.Windows.Clubs
 
             if (selectedRow != null)
             {
-                DisplayClubPlayersWindow displayClubPlayersWindow = new DisplayClubPlayersWindow(selectedRow.Id);
+                DisplayClubPlayersWindow displayClubPlayersWindow = new DisplayClubPlayersWindow(selectedRow.Id, selectedRow.Name);
                 displayClubPlayersWindow.ShowDialog();
             }
         }

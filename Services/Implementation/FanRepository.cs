@@ -156,5 +156,36 @@ namespace Football_Fan_Manager.Services.Implementation
             }
             return clubs;
         }
+
+        public List<Club> GetClubsWithoutFavorite(int fanId)
+        {
+            var clubs = new List<Club>();
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new SQLiteCommand(fanQueryProvider.GetClubsWithoutFavorite, connection))
+                {
+                    command.Parameters.AddWithValue("@FanId", fanId);
+                    command.ExecuteNonQuery();
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int id = reader.GetInt32(0);
+                            string name = reader.GetString(1);
+                            string city = reader.GetString(2);
+
+                            Club club = new Club(id, name, city);
+                            clubs.Add(club);
+                        }
+                    }
+                }
+            }
+
+            return clubs;
+        }
     }
 }

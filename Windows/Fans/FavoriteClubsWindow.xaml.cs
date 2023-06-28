@@ -24,13 +24,14 @@ namespace Football_Fan_Manager.Windows.Fans
     {
         private IFanRepository fanRepository;
         private readonly int FanId;
-        public FavoriteClubsWindow(int fanId)
+        public FavoriteClubsWindow(int fanId, string fanName, string fanSurname)
         {
             InitializeComponent();
             fanRepository = new FanRepository();
             FanId = fanId;
 
             ClubsDataGrid.ItemsSource = fanRepository.GetFavoriteClubs(FanId);
+            headerLabel.Content = $"{fanName} {fanSurname}'s favorite clubs";
         }
 
         private void AddClub_Button_Click(object sender, RoutedEventArgs e)
