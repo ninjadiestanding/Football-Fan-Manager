@@ -1,0 +1,36 @@
+﻿<Window x:Class="Football_Fan_Manager.Windows.Fans.DisplayFansWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Football_Fan_Manager.Windows.Fans"
+        mc:Ignorable="d"
+        Title="Fans" Height="360" Width="330"
+        Background="LightBlue"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Canvas>
+
+            <Label FontSize="20" Canvas.Left="5">Football fans</Label>
+
+            <Button Content="Add" Canvas.Left="10" Canvas.Top="35" Click="AddFan_Button_Click" />
+            <Button Content="Edit" Canvas.Left="37" Canvas.Top="35" Click="EditFan_Button_Click" />
+            <Button Content="Delete" Canvas.Left="62" Canvas.Top="35" Click="DeleteFan_Button_Click" />
+
+            <Button Content="Favorite clubs" Canvas.Left="213" Canvas.Top="35" Click="FavoriteClubs_Button_Click" />
+
+            <DataGrid x:Name="FansDataGrid" ItemsSource="{Binding Fan}" Width="280" Height="200" Canvas.Top="60" Canvas.Left="10" 
+                          AutoGenerateColumns="False" IsReadOnly="True" SelectionUnit="FullRow" CanUserResizeColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="30" />
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="80" />
+                    <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="80" />
+                    <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}" Width="80" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button Content="Close" Canvas.Left="257" Canvas.Top="288" Click="Close_Button_Click" />
+
+        </Canvas>
+    </Grid>
+</Window>

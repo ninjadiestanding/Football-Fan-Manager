@@ -1,0 +1,35 @@
+﻿<Window x:Class="Football_Fan_Manager.Windows.Clubs.DisplayClubPlayersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Football_Fan_Manager.Windows.Clubs"
+        mc:Ignorable="d"
+        Title="Club Players" Height="300" Width="490"
+        Background="LightBlue"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Canvas>
+
+            <Label FontSize="20" Canvas.Left="5">Club players</Label>
+
+            <Button Content="Add" Canvas.Left="10" Canvas.Top="35" Click="AddPlayer_Button_Click" />
+            <Button Content="Exclude" Canvas.Left="38" Canvas.Top="35" Click="ExcludePlayer_Button_Click" />
+
+            <DataGrid x:Name="ClubPlayersDataGrid" ItemsSource="{Binding Player}" Width="450" Height="150" Canvas.Top="60" Canvas.Left="10" 
+                          AutoGenerateColumns="False" IsReadOnly="True" SelectionUnit="FullRow" CanUserResizeColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="30" />
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="80" />
+                    <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="80" />
+                    <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}" Width="80" />
+                    <DataGridTextColumn Header="Date of birth" Binding="{Binding DateOfBirth}" Width="80" />
+                    <DataGridTextColumn Header="Snils" Binding="{Binding Snils}" Width="80" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Button Click="Cancel_Button_Click" Content="Cancel" FontSize="13" Canvas.Left="410" Canvas.Top="232" Width="50" />
+
+        </Canvas>
+    </Grid>
+</Window>

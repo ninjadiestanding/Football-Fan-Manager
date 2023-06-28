@@ -1,0 +1,23 @@
+﻿<Window x:Class="Football_Fan_Manager.Windows.Fans.AddFavoriteClubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Football_Fan_Manager.Windows.Fans"
+        mc:Ignorable="d"
+        Title="Add favorite club" Height="130" Width="250"
+        Background="LightBlue"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Canvas>
+
+            <Label Content="Club:" FontSize="15" Canvas.Top="15" Canvas.Left="5" />
+            <ComboBox Name="ClubComboBox" IsEditable="False"  ItemsSource="{Binding Clubs}" SelectedItem="{Binding SelectedClub}" DisplayMemberPath="Name"
+                      Canvas.Left="50" Canvas.Top="20" Width="150" Height="20" />
+
+            <Button Click="Add_Button_Click" Content="Add" FontSize="13" Canvas.Left="100" Canvas.Top="59" Width="50" />
+            <Button Click="Cancel_Button_Click" Content="Cancel" FontSize="13" Canvas.Left="150" Canvas.Top="59" Width="50" />
+
+        </Canvas>
+    </Grid>
+</Window>

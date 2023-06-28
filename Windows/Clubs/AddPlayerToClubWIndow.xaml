@@ -1,0 +1,34 @@
+﻿<Window x:Class="Football_Fan_Manager.Windows.Clubs.AddPlayerToClubWIndow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Football_Fan_Manager.Windows.Clubs"
+        mc:Ignorable="d"
+        Title="Add Player to club" Height="300" Width="480"
+        Background="LightBlue"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Canvas>
+
+            <Label Content="Select a player:" FontSize="15" Canvas.Top="10" Canvas.Left="5" />
+
+            <DataGrid x:Name="PlayersDataGrid" ItemsSource="{Binding Player}" Width="440" Height="150" Canvas.Top="50" Canvas.Left="10" 
+                          AutoGenerateColumns="False" IsReadOnly="True" SelectionUnit="FullRow" CanUserResizeColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="30" />
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="80" />
+                    <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="80" />
+                    <DataGridTextColumn Header="Patronymic" Binding="{Binding Patronymic}" Width="80" />
+                    <DataGridTextColumn Header="Date of birth" Binding="{Binding DateOfBirth}" Width="80" />
+                    <DataGridTextColumn Header="Snils" Binding="{Binding Snils}" Width="80" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+            <Button Click="Save_Button_Click" Content="Add" FontSize="13" Canvas.Left="350" Canvas.Top="224" Width="50" />
+            <Button Click="Cancel_Button_Click" Content="Cancel" FontSize="13" Canvas.Left="400" Canvas.Top="224" Width="50" />
+
+        </Canvas>
+    </Grid>
+</Window>
